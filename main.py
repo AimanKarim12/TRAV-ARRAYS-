@@ -3,15 +3,16 @@
 #QUESTION 1
 array = ["yes", "yes", "maybe", "no", "no", "no"]
 
-countyes = array.count("yes")
-countno = array.count("no")
-countmaybe = array.count("maybe")
-
-print("Count of yes: ", countyes)
-print("Count of no: ", countno)
-print("Count of maybe: ", countmaybe)
-
-
+yes = 0
+no = 0
+maybe = 0
+for x in array:
+	if x == "yes":
+		yes += 1
+	elif x == "no":
+		no += 1
+	else: x == "maybe"
+	maybe += 1
 
 
 #QUESTION 2
@@ -25,7 +26,7 @@ for i in ages :
 	if i > limit :
 		count = count + 1
 
-print ("The numbers greater than 18 : " + str(count))
+print (f"The numbers greater than 18 : {count}")
 
 # LESS THAN 18
 count = 0
@@ -33,37 +34,40 @@ for i in ages :
 	if i < limit :
 		count = count + 1
 
-print ("The numbers less than 18 : " + str(count))
+print (f"The numbers less than 18 : {count}")
 
 
-
-
-# QUESTION 3
+#QUESTION 3	A
 
 prices = [15, 10, 21, 48, 54, 60] 
 
-limit2 = 20
-limit3 = 50
-
-# LESS THAN 20
 count = 0
-for i in prices :
-	if i > limit2 :
+count1 = 0
+count2 = 0
+for x in prices:
+	if x <= 20:
 		count = count + 1
+	elif x <= 49:
+		count1 = count + 1
+	else: x <= 50
+count2 = count + 1
 
-print ("The prices less than 20 : " + str(count))
+print(f"the number of product under 20 is: {count}")
+print(f"the number of product between 20 and 49 is: {count1}")
+print(f"the number of product 50 or higher is: {count2}")
 
-# MORE THAN 50
-count = 0
-for i in prices :
-	if i < limit3 :
-		count = count + 1
+# QUESTION 3 B
 
-print ("The prices more than 50 : " + str(count))
+for i in range(len(prices)):
+ prices[i] += 2
 
-# BETWEEN 20-49
+# C 
+for i in range(len(prices)):
+ prices[i] *= 1.05
 
-for x in range in prices (20, 49):
-  print(x)
+# D
+
+for i in range(len(prices)):
+ prices[i] *= 0.8
 
 
